@@ -1,0 +1,18 @@
+harnessApiVersion: '1.0'
+type: JENKINS
+authMechanism: UserName/Password
+password: safeharness:7v3SScklSCKh44D7_LtkxQ
+url: http://54.164.117.117:8080
+usageRestrictions:
+  appEnvRestrictions:
+  - appFilter:
+      filterType: ALL
+    envFilter:
+      filterTypes:
+      - PROD
+  - appFilter:
+      filterType: ALL
+    envFilter:
+      filterTypes:
+      - NON_PROD
+username: admin
