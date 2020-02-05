@@ -43,5 +43,4 @@ commandUnits:
   deploymentType: SSH
   name: Exec-1
   scriptType: BASH
-  workingDirectory: Transfer updateset
 targetToAllEnv: true
