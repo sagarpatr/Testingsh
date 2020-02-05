@@ -1,7 +1,4 @@
 harnessApiVersion: '1.0'
 type: RESIZE
 commandUnitType: COMMAND
-commandUnits:
-- commandUnitType: COMMAND
-  name: Download the update and ATF files from JFrog and unzip it
 targetToAllEnv: true
