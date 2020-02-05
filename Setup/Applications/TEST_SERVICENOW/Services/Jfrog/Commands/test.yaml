@@ -7,5 +7,5 @@ commandUnits:
   deploymentType: SSH
   destinationDirectoryPath: /opt
   name: Copy
-  source: ARTIFACTS
+  source: APPLICATION_STACK
 targetToAllEnv: true
