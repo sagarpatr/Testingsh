@@ -21,4 +21,27 @@ commandUnits:
   deploymentType: SSH
   name: Exec
   scriptType: BASH
+- command: |
+    #!/bin/bash
+    set -e
+
+    echo "Copying build artifact to JFrog Artifactory"
+
+    ls -l *.xml > xmlfile
+
+    awk -F " " '{print $9}' xmlfile
+
+    awk -F " " '{print $9}' xmlfile > file
+
+    for xml in `cat file`
+    do
+      value=`cat $xml | base64`
+      echo -e "curl \"https://dev88364.service-now.com/api/336501/jenkins_integration/deploy\" --request POST --header \"Accept:application/json\" --header \"Content-Type:application/xml\" --data \""$value"\" --user 'admin':'${SNOW_QA_PASSWORD}'" > script
+      bash script
+    done
+  commandUnitType: EXEC
+  deploymentType: SSH
+  name: Exec-1
+  scriptType: BASH
+  workingDirectory: Transfer updateset
 targetToAllEnv: true
