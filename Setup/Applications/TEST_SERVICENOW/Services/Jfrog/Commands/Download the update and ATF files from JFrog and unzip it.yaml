@@ -1,4 +1,24 @@
 harnessApiVersion: '1.0'
 type: OTHER
 commandUnitType: COMMAND
+commandUnits:
+- command: |
+    #!/bin/bash
+    set -xe
+
+    rm -rf download
+    echo "Downloading updateset from JFrog Artifactory"
+    mkdir download
+    curl -uadmin:$JFROG_PASSWORD -O "http://18.207.110.252:8081/artifactory/ServiceNow-sprint0/updateset-${JOB_NAME}-${BUILD_NUMBER}.zip"
+    mv updateset-${JOB_NAME}-${BUILD_NUMBER}.zip download
+    ls -lrth download
+    ls -lrth
+    unzip download/updateset-${JOB_NAME}-${BUILD_NUMBER}.zip
+    rm -f download/updateset-${JOB_NAME}-${BUILD_NUMBER}.zip
+    ls -lrth download
+    rm -rf download
+  commandUnitType: EXEC
+  deploymentType: SSH
+  name: Exec
+  scriptType: BASH
 targetToAllEnv: true
