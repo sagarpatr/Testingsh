@@ -43,4 +43,10 @@ commandUnits:
   deploymentType: SSH
   name: Exec-1
   scriptType: BASH
+- command: /tmp
+  commandUnitType: EXEC
+  deploymentType: SSH
+  name: Exec-2
+  scriptType: BASH
+  workingDirectory: Artifact download directory
 targetToAllEnv: true
