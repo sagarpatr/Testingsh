@@ -1,5 +1,7 @@
 harnessApiVersion: '1.0'
 type: KUBERNETES_CLUSTER
+continuousEfficiencyConfig:
+  isContinuousEfficiencyEnabled: false
 delegateName: harness-sample-k8s-delegate
 skipValidation: true
 usageRestrictions:
