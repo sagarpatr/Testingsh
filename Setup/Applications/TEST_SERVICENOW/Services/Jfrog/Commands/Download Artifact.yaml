@@ -1,4 +1,11 @@
 harnessApiVersion: '1.0'
 type: OTHER
 commandUnitType: COMMAND
+commandUnits:
+- artifactVariableName: artifact
+  commandUnitType: DOWNLOAD_ARTIFACT
+  deploymentType: SSH
+  name: Download Artifact
+  scriptType: BASH
+  workingDirectory: /opt
 targetToAllEnv: true
