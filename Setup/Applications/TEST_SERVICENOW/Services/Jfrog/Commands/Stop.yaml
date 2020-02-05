@@ -1,10 +1,4 @@
 harnessApiVersion: '1.0'
 type: STOP
 commandUnitType: COMMAND
-commandUnits:
-- command: echo "service stopped check should be added here"
-  commandUnitType: PROCESS_CHECK_STOPPED
-  deploymentType: SSH
-  name: Service Stopped
-  scriptType: BASH
 targetToAllEnv: true
