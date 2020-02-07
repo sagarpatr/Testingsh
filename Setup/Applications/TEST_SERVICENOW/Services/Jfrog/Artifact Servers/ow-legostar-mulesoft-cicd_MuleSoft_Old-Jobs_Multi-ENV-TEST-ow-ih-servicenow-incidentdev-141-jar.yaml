@@ -1,7 +1,0 @@
-harnessApiVersion: '1.0'
-type: ARTIFACTORY
-artifactPattern: MuleSoft/Old-Jobs/Multi-ENV-TEST-ow-ih-servicenow-incidentdev-141.jar
-metadataOnly: false
-repositoryName: ow-legostar-mulesoft-cicd
-repositoryType: any
-serverName: jfrog
